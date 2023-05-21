@@ -1,0 +1,21 @@
+
+body {
+    font-size: 18px;
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}
+
+.grey {
+    color: grey;
+}
+
+.highligt {
+    background-color: yellow
+}
+
