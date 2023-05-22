@@ -1,0 +1,28 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px dashed red;
+    font-size: 1.5rem;
+    padding: 1.5em;
+    margin: 1em;
+    outline: 3px solid purple;
+    outline-offset: -1rem;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: 3rem auto;
+    border: solid red 1.8px;
+    border-radius: 50%;
+    outline: 1.5px dashed purple;
+    outline-offset: -0.3rem;
+}
+
+
