@@ -1,0 +1,23 @@
+/* Typography is the way that text is arranged and presented. */
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300&display=swap');
+
+body {
+    padding: 10%;
+    font-size: 1.5rem;
+    
+}
+
+/* input, button {
+    font: inherit;
+
+} */
+
+p {
+    text-decoration: none;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    
+}
