@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300&display=swap');
+
+
+body {
+    padding: 10%;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: sans-serif, 'Roboto';
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
+
+
+
+a:hover, a:focus {
+    opacity: 0.5;
+}
+
+a:active {
+    color: red;
+}
+
