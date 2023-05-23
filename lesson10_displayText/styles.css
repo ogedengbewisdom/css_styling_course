@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 2rem ;
+}
+
+/* main {
+    background-color: blue;    
+}
+
+p {
+    background-color: wheat;
+    
+}
+
+.opposite {
+    background-color: black;
+    color: wheat;
+    display: inline-block;
+    padding: 1rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    padding-top: 35px;
+} */
+
+ul {
+    list-style-type: none;
+    text-align: right;
+    background-color: black;
+    margin: 0;
+    
+}
+
+li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.9rem;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: yellow;
+}
+
+a:hover,
+a:focus {
+    color: wheat;
+    text-transform: uppercase;
+}
+
+a:active {
+    color: red;
+    background-color: purple;
+}
+
+
+
