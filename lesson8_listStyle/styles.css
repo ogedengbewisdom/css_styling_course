@@ -1,0 +1,26 @@
+
+body {
+    padding: 5% 10%;
+    font-size: 2rem;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+ul {
+    text-align: center;
+    list-style-position: initial;
+    list-style-type: square;
+}
+
+ul li:nth-child(even) {
+    color: red;
+
+}
+
+ul ::marker {
+    color: darkblue;
+    content: "tho >>";
+}
+
