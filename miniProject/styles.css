@@ -1,0 +1,53 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 600px;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+nav {
+    border: 1px solid #333;
+    font-size: 2rem;
+    line-height: 1.6;
+    border-radius: 2rem;
+}
+
+nav h2 {
+    background-color: goldenrod;
+    border-radius: 2rem 2rem 0 0;
+}
+
+ul {
+   list-style-type: none; 
+}
+
+li {
+    border-top: 1px solid #333;
+}
+
+li a,
+li a:visited {
+    text-decoration: none;
+    color: #434141;  
+    display: block;
+}
+
+li a:hover,
+li a:focus {
+    background: #434141;
+    color: lightgoldenrodyellow;
+}
+
+li a:active {
+    color: red;
+}
+
+li:last-child a {
+    border-radius: 0 0 2rem 2rem;
+}
