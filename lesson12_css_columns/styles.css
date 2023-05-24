@@ -1,0 +1,38 @@
+
+
+body {
+    font-size: 1.5rem;
+}
+
+.colum {
+    /* column-count: 4;
+    column-width: 250px; */
+    columns: 4 250px;
+    column-rule: 2px solid #7d7777;
+    column-gap: 1.5rem;
+}
+
+.colum p {
+    margin-top: 0;
+}
+
+.colum h2 {
+    text-align: center;
+    background-color: black;
+    color: wheat;
+    margin-top: 0;
+    padding: 1rem;
+    break-inside: avoid;
+}
+
+.colum .quote {
+    margin-top: 1.5rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #7d7777;
+    column-span: all;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
