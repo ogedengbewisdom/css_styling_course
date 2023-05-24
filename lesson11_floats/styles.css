@@ -55,9 +55,17 @@ li {
     list-style-type: none;
 }
 
-a {
+li a,
+li a:visited {
     text-decoration: none;
     color: black;
+}
+
+li a:hover,
+li a:focus {
+    color: bisque;
+    background-color: #333;
+
 }
 
 .mainsec {
