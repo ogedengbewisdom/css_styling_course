@@ -21,15 +21,29 @@ body {
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
     align-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
   } 
 
 .box {
-    min-width: 100px;
+    /* min-width: 100px; */
     height: 100px;
     background-color: #000;
     color: #fff;
     font-size: 2rem;
     padding: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 2 1 250px
+}
+
+.box:nth-child(2) {
+    flex-shrink: 2;
+    flex: 2 2 250px;
+    order: -1;
 }
