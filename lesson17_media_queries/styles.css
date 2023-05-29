@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -7,37 +5,92 @@
 }
 
 body {
-    font-size: 1.5rem;
-    font-family: "Nunito", sans-serif;
-    min-height: 100vh;
-    background-color: grey;
-    background-image: radial-gradient(whitesmoke, grey);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header {
+  background-color: grey;
+  background-image: radial-gradient(whitesmoke, grey);
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: darkblue;
-  width: 100%;
+  min-height: 100vh;
+  font-size: 1.5rem;
 }
 
-header, footer {
+header, footer, nav, main {
   position: sticky;
+  background-color: #1E293B;
+  color: whitesmoke;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
   top: 0;
+  border-bottom: #1E293B solid 1px;
+}
+
+nav {
+  background-color: white;
+  color: #1E293B;
 }
 
 main {
   flex-grow: 1;
+  justify-content: center;
+  background-color: transparent;
+  color: black;
 }
-
 footer {
   bottom: 0;
+}
+
+@media screen and (min-width: 481px) {
+  body {
+    background-color: goldenrod;
+    background-image: radial-gradient(white, goldenrod);
+  }
+  nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-color: green;
+    background-image: radial-gradient(white, green);
+  }
+}
+@media screen and (min-width: 992px) {
+  body {
+    background-color: red;
+    background-image: radial-gradient(white, red);
+  }
+
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: purple;
+    background-image: radial-gradient(white, purple);
+  }
+
+}
+@media screen and (min-width: 1400px) {
+  body {
+    background-color: wheat;
+    background-image: radial-gradient(white, wheat);
+  }
+
+}
+@media screen and (max-height: 425px) and (orientation: landscape) {
+  body {
+    background-color: dodgerblue;
+    background-image: radial-gradient(white, dodgerblue);
+  }
+  h2, h1 {
+    font-size: 1.2rem;
+  }
+  nav {
+    display: none;
+  }
+
 }
 
