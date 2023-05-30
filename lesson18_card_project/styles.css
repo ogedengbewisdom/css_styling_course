@@ -94,6 +94,9 @@ main {
     font-size: 1.45rem;
 }
 
+.card:target {
+    border: 2px purple solid;
+}
 .card figure {
     display: flex;
     flex-direction: column;
