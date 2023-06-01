@@ -5,15 +5,16 @@
   }
 
   :root {
-    --PADDING: 0.5rem;
+    --PADDING: 0.5em;
     --FG: 1;
-    --FS: min(2.25rem, 3vh);
+    --FS-SM: clamp(1.25rem, 2vh, 1.5rem);
+    --FS: clamp(1.75rem, 4vh, 2.25rem);
     --FS-XL: 3rem;
     --BGCOLOR: grey;
     --SMOKECL: whitesmoke;
     --PURE: white;
     --DEEP: #1E293B;
-    --DARK: black;
+    --DARK: rgb(59, 56, 56);
     --BTBORDER: 0.5px solid var(--DARK);
     --BXSHADOW: 0 6px 5px -5px var(--DARK);
 
@@ -57,7 +58,6 @@
   nav {
     background-color: var(--PURE);
     color: var(--DEEP);
-    padding: var(--PADDING);
     border: var(--BTBORDER);
     box-shadow: var(--BXSHADOW); 
 }
@@ -65,14 +65,44 @@
   main {
     display: flex;
     flex-grow: var(--FG);
-    justify-content: space-evenly;
-    align-items: center;
-    gap: min(4vw, 15px);
-    padding: 10px 0;
-    flex-flow: row wrap;
+    gap: min(2vw, 20px);
+  }
+
+  main section {
+    flex-grow: var(--FG);
+    padding: var(--PADDING);
+    font-size: var(--FS);
+  }
+
+  main aside {
+    background-color: var(--DARK);
+    color: var(--PURE);
+    font-size: var(--FS-SM);
+    padding: var(--PADDING);
+    font-style: italic;
+  }
+
+  section a:visited,
+  section a:link {
+    text-decoration: none;
+    color: var(--DEEP);
+  }
+
+  section a:hover,
+  section a:focus {
+    filter: brightness(200%);
+    font-size: var(--FS-XL);
+  }
+
+  section a:active {
+    color: red;
+}
+
+  .content {
+    margin-top: 20px;
   }
   
-  main .square {
+  /* main .square {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,13 +114,40 @@
     font-size: var(--FS-XL);
     background-color: var(--SQUARE-BKC);
     box-shadow: var(--BXSHADOW);
+  } */
+
+  /* main .square--highlight {
+    --SQUARE-BKC: cornflowerblue;
+  } */
+
+  .tooltip {
+    position: relative;
   }
 
-  main .square--highlight {
-    --SQUARE-BKC: cornflowerblue;
+  .tooltip:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -20px;
+    white-space: nowrap;
+    background-color: var(--DARK);
+    border-radius: 15px;
+    padding: var(--PADDING);
   }
 
   footer {
     bottom: 0;
   }
   
+@media screen and (min-width: 576px) {
+  main {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  main section{
+    width: calc(70% - 5px)
+  }
+
+  main aside {
+    width: calc(30% - 5px);
+  }
+}
