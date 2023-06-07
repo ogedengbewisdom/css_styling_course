@@ -15,13 +15,13 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#menu">Menu</a></li>
+                <li><a href="/lesson24_final_Project/#menu">Menu</a></li>
                 <li><a href="hours.html">Hours</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
+    <section id="header">
         <figure>
             <img src="images/tacos_close_up_1000x649.png" alt="Little Taco Shop Tacos" title="We love tacos" width="1000" height="649">
             <figcaption class="offscreen">Little Taco Shop Tacos</figcaption>
@@ -32,7 +32,7 @@
         <h2>Our Contact Form</h2>
         <form action="">
             <fieldset>
-                <legend>Contact Us</legend>
+                <legend class="offscreen">Contact Us</legend>
                 <p>
                    <label for="name">Name</label>
                    <input type="text" name="name" id="name" placeholder="your name">
@@ -50,10 +50,11 @@
             </fieldset>
         </form>
     </main>
-    <footer>
-        <span class="nowrap">
-           <p>Copyright &copy; The Little Taco Shop</p>
-        </span>
+    <footer class="footer">
+        <p>
+            <span class="nowrap">Copyright &copy; <time id="year"></time></span>
+            <span class="nowrap">Little Taco Shop</span>
+        </p>
     </footer>
 </body>
 </html>
