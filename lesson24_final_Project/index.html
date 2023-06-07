@@ -10,18 +10,19 @@
 </head>
 <body>
     <header class="header">
-        <h2 class="header__title">Welcome to The Little Taco Shop</h2>
+        <h2 class="header__title">Little Taco Shop</h2>
         <nav class="header__nav">
             <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#menu">Menu</a></li>
+                <li><a href="/lesson24_final_Project/#menu">Menu</a></li>
                 <li><a href="hours.html">Hours</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
-
-    <section>
+    
+    <section class="hero" id="header">
+        <h2 class="hero__title">Bienvenidos!</h2>
         <figure>
             <img src="images/tacos_and_drink_1000x667.png" alt="tacos and drinks" title="We love tacos" width="1000" height="667">
             <figcaption class="offscreen">Tacos and Drinks</figcaption>
@@ -29,15 +30,15 @@
     </section>
 
         <main class="main">
-            <article class="main__article">
+            <article id="menu" class="main__article">
                 <h2>Our Menu</h2>
                 <table>
-                    <caption>Our Tacos</caption>
+                    <caption class="offscreen">Our Tacos</caption>
 
                     <thead>
                         <tr>
                             <th>Tacos</th>
-                            <th><abbr title="Quantity">Qty</abbr></th>
+                            <th>Quantity</th>
                             <th>Price</th>
                         </tr>
                     </thead>
@@ -82,15 +83,15 @@
                         </tr>
                     </tfoot>
                 </table>
-
-                <a href="#header">Back to Top</a>
+                <p class="center"><a href="#header">Back to Top</a></p>
             </article>
         </main>
 
-        <footer>
-            <span class="nowrap">
-               <p>Copyright &copy; The Little Taco Shop</p>
-            </span>
+        <footer class="footer">
+            <p>
+                <span class="nowrap">Copyright &copy; <time id="year"></time></span>
+                <span class="nowrap">Little Taco Shop</span>
+            </p>
         </footer>
 </body>
 </html>
