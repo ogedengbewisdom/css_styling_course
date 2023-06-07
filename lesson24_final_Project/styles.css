@@ -1,7 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap');
+
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+:root {
+    /* || FONTS */
+    --FF: "Nunito", sans-serif;
+    --FF-HEADING: "Fugaz One", cursive;
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+    /* || COLORS */
+    --BG-COLOR: orange;
+    --BG-COLOR-FADE: rgb(252, 220, 160);
+    --BG-IMAGE: linear-gradient(to bottom, var(--BG-COLOR), var(--BG-COLOR-FADE));
+    --BDY-COLOR: #fff;
+    --BG-HEADER: black;
+    --F-COLOR: rgb(51, 123, 51);
+    /* || general */
+
+    --BORDER: solid 1px var(--BG-HEADER);
+    --SHADOW: 2px 5px 10px rgba(0, 0, 0, 0.467);
+    --PADDING-TB: 0.25em;
+    --PADDING-SIDE: 2.5%; 
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--FF);
+    font-size: var(--FS);
+    background-color: var(--BG-COLOR);
+    background-image: var(--BG-IMAGE);
+    overflow: scroll;
+}
+
+body {
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: var(--BDY-COLOR);
+    border: var(--BORDER);
+    box-shadow: var(--SHADOW);
+}
+
+header, footer {
+    z-index: 1;
+    background-color: var(--BG-HEADER);
+    position: sticky;
+}
+
+header {
+    top: 0;
+}
+.footer p {
+    text-align: center;
+    color: var(--BDY-COLOR);
+}
+
+footer {
+    bottom: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--FF-HEADING);
+    letter-spacing: 0.1em;
+    color: var(--F-COLOR);
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.header__title, footer span p {
+    color: var(--BDY-COLOR);
+    text-align: center;
+}
+
+.header__nav {
+    background-color: var(--BDY-COLOR);
+}
+
+.header__nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.header__nav ul li {
+    font-weight: bold;
+}
+
+.header__nav ul li a:any-link {
+    color: var(--BG-HEADER);
+}
+
+.hero {
+    position: relative;
+}
+
+.hero__title {
+    position: absolute;
+    background-color: var(--F-COLOR);
+    color: var(--BDY-COLOR);
+    padding: 0.25em 0.5em;
+    text-shadow: 2px 2px 5px var(--BORDER-COLOR);
+    top: -100px;
+    left: 20px;
+    animation: 2s ease-in-out forwards welcome;
+}
+.center {
+    text-align: center;
+    margin-top: 2em;
+}
+.main{
+    min-height: calc(100vh - 20rem);
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    margin: 1em 0;
+}
+
+.main__article table,
+.main__article h2 {
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+label,
+input,
+button {
+    font: inherit;
+}
+
+input,
+label {
+    display: block;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,textarea {
+    margin-bottom: 1em;
+    width: 100%;
+    outline: none;
+    border: var(--BORDER);
+    border-radius: 4px;
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.main form fieldset{
+    border: none;
+}
+
+.main__article p a {
+    color: var(--BG-HEADER);
+    font-weight: bold;
+}
+
+tr, 
+th,
+td {
+    border: 2.5px solid var(--BG-HEADER);
+    padding: 1em 1.5em;
+}
+
+thead th:first-child {
+    border-top-left-radius: 15px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 15px;
+}
+
+tfoot tr td:first-child {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+@keyframes welcome {
+
+    0% {
+        top: -20px;
+        transform: skew(0deg, -5deg) scaleY(0);
+    }
+    80% {
+        top: 30px;
+        transform: skew(10deg, 10deg) scaleY(1.2);
+    }
+     100% {
+        top: 20px;
+        transform: skew(-10deg, -7deg) scaleY(1);
+    } 
+}
+
+
+@media screen and (min-width: 768px) {
+    .header .header__title::before {
+        content: "🌮 ";
+    }  
+    
+    .header .header__title::after {
+        content: " 🌮";
+    }
 }
