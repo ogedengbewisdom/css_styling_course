@@ -214,6 +214,20 @@ tfoot tr td:first-child {
     } 
 }
 
+button {
+    background-color: var(--F-COLOR);
+    font-weight: bold;
+    padding: 0.3em;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 .5em;
+}
+
+button:hover {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+
 
 @media screen and (min-width: 768px) {
     .header .header__title::before {
